@@ -26,6 +26,7 @@ import com.jiangdg.ausbc.callback.ICaptureCallBack
 import com.jiangdg.ausbc.callback.IDeviceConnectCallBack
 import com.jiangdg.ausbc.callback.IEncodeDataCallBack
 import com.jiangdg.ausbc.callback.IImageDataCallBack
+import java.nio.ByteBuffer
 import com.jiangdg.ausbc.utils.Logger
 import com.jiangdg.ausbc.utils.SettableFuture
 import com.jiangdg.ausbc.widget.AspectRatioTextureView
@@ -37,7 +38,7 @@ import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicBoolean
 
-internal class UVCCameraView(
+class UVCCameraView(
     private val mContext: Context,
     private val params: Any?,
     private val videoStreamHandler: VideoStreamHandler,

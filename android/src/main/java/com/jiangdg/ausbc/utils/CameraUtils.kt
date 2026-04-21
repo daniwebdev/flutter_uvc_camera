@@ -57,7 +57,7 @@ object CameraUtils {
             UsbConstants.USB_CLASS_VIDEO -> {
                 true
             }
-            UsbConstants.USB_CLASS_MISC -> {
+            UsbConstants.USB_CLASS_MISC, UsbConstants.USB_CLASS_VENDOR_SPEC -> {
                 var isVideo = false
                 for (i in 0 until device.interfaceCount) {
                     val cls = device.getInterface(i).interfaceClass
